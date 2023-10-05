@@ -5,8 +5,16 @@ import Hero from './components/Hero'
 import Works from './components/Works'
 
 const Conatiner = styled.div`
-height: 100vh;
-background-color: rebeccapurple; 
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  background: url("./images/bg.jpg");
+  color: white;
+  overflow-y: auto;
+  scrollbar-width: none;
+  ::-webkit-scrollbar{
+    display: none;
+  }
 `;
 
 function App() {
