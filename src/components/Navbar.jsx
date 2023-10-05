@@ -20,11 +20,12 @@ const Links = styled.div`
 `;
 
 const Logo = styled.img`
-    height: 6vh;
+    height: 50px;
 `;
 
 const Icons = styled.div`
-
+    display: flex;
+    align-items: center;
 `;
 const List = styled.ul`
     display: flex;
@@ -32,10 +33,17 @@ const List = styled.ul`
     list-style: none;
 `;
 const ListItem = styled.li`
-    
+    cursor: pointer;
 `;
 const Button = styled.button`
-
+    cursor: pointer;
+    width: 100px;
+    padding: 10px;
+    background: none;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    border-radius: 30px;
 `;
 
 const Navbar = () => {
