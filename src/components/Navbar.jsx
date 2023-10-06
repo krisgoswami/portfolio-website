@@ -39,9 +39,8 @@ const Button = styled.button`
     cursor: pointer;
     width: 100px;
     padding: 10px;
-    background: none;
-    border-style: solid;
-    border-color: white;
+    background: #7a2d41;
+    border-style: none;
     color: white;
     border-radius: 30px;
 `;
