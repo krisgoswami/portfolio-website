@@ -2,11 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-    height: 100vh;
-    scroll-snap-align: center;
-    display: flex;
-    justify-content: center;
+    padding: 50px;
     text-align: center;
+    scroll-snap-align: center;
+    height: 100vh;
 `;
 
 const Title = styled.h1`
@@ -14,38 +13,44 @@ const Title = styled.h1`
     margin-bottom: 30px;
 `;
 
-const TechStackList = styled.ul`
-    list-style: none;
-    padding: 0;
+const TechStackContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 `;
 
-const TechStackItem = styled.li`
-    font-size: 20px;
-    margin-bottom: 10px;
+const TechStackItem = styled.img`
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ededed;
+    border-radius: 20px;
 `;
 
 const AboutMe = () => {
-    const frontendStack = ['React', 'HTML', 'CSS', 'Tailwind', 'Material-UI', 'Chakra UI'];
-    const backendStack = ['Node.js', 'Express', 'MongoDB'];
+    const frontendStack = ['react', 'html', 'css', 'tailwind', 'mui', 'chakra'];
+    const backendStack = ['nodejs', 'express', 'mongodb'];
 
     return (
         <Section>
             <Title>Tech Stacks I Know</Title>
             <div>
-                <h2>Frontend:</h2>
-                <TechStackList>
+                <h2>Frontend</h2>
+                <TechStackContainer>
                     {frontendStack.map((tech, index) => (
-                        <TechStackItem key={index}>{tech}</TechStackItem>
+                        <TechStackItem key={index} src={`./images/${tech}.svg`} alt={tech} />
                     ))}
-                </TechStackList>
+                </TechStackContainer>
             </div>
             <div>
-                <h2>Backend:</h2>
-                <TechStackList>
+                <h2>Backend</h2>
+                <TechStackContainer>
                     {backendStack.map((tech, index) => (
-                        <TechStackItem key={index}>{tech}</TechStackItem>
+                        <TechStackItem key={index} src={`./images/${tech}.svg`} alt={tech} />
                     ))}
-                </TechStackList>
+                </TechStackContainer>
             </div>
         </Section>
     );
