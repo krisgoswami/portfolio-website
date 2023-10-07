@@ -21,12 +21,17 @@ const TechStackContainer = styled.div`
 `;
 
 const TechStackItem = styled.img`
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
     padding: 20px;
-    background-color: #ededed;
+    background-color: #ffffff42;
     border-radius: 20px;
+    transition: transform 0.3s; /* Added transition for smooth hover effect */
+    
+    &:hover {
+        transform: scale(1.1); /* Scale the image on hover */
+    }
 `;
 
 const AboutMe = () => {
