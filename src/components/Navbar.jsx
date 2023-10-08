@@ -43,6 +43,7 @@ const Button = styled.button`
     border-style: none;
     color: white;
     border-radius: 30px;
+    font-family: 'Gabarito';
 `;
 
 const Navbar = () => {
