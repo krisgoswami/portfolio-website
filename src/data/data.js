@@ -16,6 +16,32 @@ export const works = [
     },
 ];
 
+export const workex = [
+    {
+        company: "Kinetiq",
+        position: "Team Lead (Advertisement Data Analyst and QA)",
+        duration: "Sep 2020 - May 2022"
+    },
+    {
+        company: "Medusind",
+        position: "Senior Client Service Executive",
+        duration: "Jun 2018 - Jun 2019"
+    },
+]
+
+export const education = [
+    {
+        degree: "MS in Computer Science",
+        university: "Liverpool John Moores University",
+        completion: "Aug 2023"
+    },
+    {
+        degree: "Post Graduate Diploma",
+        university: "IIIT-Bangalore",
+        completion: "August 2022"
+    },
+]
+
 export const basic = [
     { name: "HTML", img: "html" },
     { name: "CSS", img: "css" },
