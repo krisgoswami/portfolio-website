@@ -1,16 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
+import { works } from '../data/data';
 
 const Section = styled.div`
     padding: 50px;
     text-align: center;
     scroll-snap-align: center;
     height: 100vh;
+
+    @media (max-width: 768px) {
+        padding: 20px;
+        overflow-y: scroll;
+    }
 `;
 
 const Title = styled.h1`
     font-size: 40px;
     margin-bottom: 30px;
+    color: #eba154;
+
+    @media (max-width: 768px) {
+        font-size: 36px;
+    }
 `;
 
 const WorkContainer = styled.div`
@@ -19,54 +30,66 @@ const WorkContainer = styled.div`
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+    }
 `;
 
 const WorkCard = styled.div`
     max-width: 400px;
-    height: 400px;
+    height: 300px;
     width: 300px;
     background: #f9f9f933;
     padding: 20px;
+    margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s; /* Added transition for smooth hover effect */
+    
+    &:hover {
+        transform: scale(1.1); /* Scale the image on hover */
+    }
+
+    @media (max-width: 768px) {
+        max-width: none;
+    }
 `;
 
 const WorkTitle = styled.h2`
     font-size: 24px;
     margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
 `;
 
 const WorkDescription = styled.p`
     font-size: 16px;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+`;
+
+const WorkImage = styled.img`
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
 `;
 
 const Works = () => {
-    const works = [
-        {
-            title: 'Website 1',
-            description: 'Description of Website 1.',
-        },
-        {
-            title: 'Website 2',
-            description: 'Description of Website 2.',
-        },
-        {
-            title: 'Website 3',
-            description: 'Description of Website 3.',
-        },
-        {
-            title: 'Website 3',
-            description: 'Description of Website 3.',
-        },
-        // Add more works as needed
-    ];
 
     return (
         <Section>
-            <Title>My Works</Title>
+            <Title>My Projects</Title>
             <WorkContainer>
                 {works.map((work, index) => (
                     <WorkCard key={index}>
+                        <WorkImage src={work.img} alt={`Screenshot of ${work.title}`} />
                         <WorkTitle>{work.title}</WorkTitle>
                         <WorkDescription>{work.description}</WorkDescription>
                     </WorkCard>

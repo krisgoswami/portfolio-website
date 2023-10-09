@@ -4,6 +4,10 @@ import styled from 'styled-components';
 const Section = styled.div`
     display: flex;
     justify-content: center;
+
+    @media only screen and (max-width: 786px){
+        width: 100%;
+    }
 `;
 
 const Container = styled.div`
@@ -12,6 +16,11 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 10px 0px;
+
+    @media only screen and (max-width: 786px){
+        width: 100%;
+        padding: 10px;
+    }
 `;
 
 const Links = styled.div`
@@ -26,11 +35,19 @@ const Logo = styled.img`
 const Icons = styled.div`
     display: flex;
     align-items: center;
+
+    @media (max-width: 768px) {
+        margin-top: 20px;
+    }
 `;
 const List = styled.ul`
     display: flex;
     gap: 20px;
     list-style: none;
+
+    @media only screen and (max-width: 786px){
+        display: none;
+    }
 `;
 const ListItem = styled.li`
     cursor: pointer;
@@ -42,8 +59,13 @@ const Button = styled.button`
     background: #7a2d41;
     border-style: none;
     color: white;
-    border-radius: 30px;
+    border-radius: 5px;
     font-family: 'Gabarito';
+    transition: background 0.3s;
+
+    &:hover {
+        background: #5e1c2a;
+    }
 `;
 
 const Navbar = () => {
@@ -53,13 +75,13 @@ const Navbar = () => {
                 <Links>
                     <Logo src="./images/logo.png" />
                     <List>
-                        <ListItem>Home</ListItem>
+                        <ListItem>About</ListItem>
                         <ListItem>Works</ListItem>
-                        <ListItem>Contact</ListItem>
+                        {/* <ListItem>Contact</ListItem> */}
                     </List>
                 </Links>
                 <Icons>
-                    <Button>Hire Now</Button>
+                    <Button>Contact Now</Button>
                 </Icons>
             </Container>
         </Section>

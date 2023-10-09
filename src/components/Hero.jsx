@@ -12,6 +12,7 @@ const Section = styled.div`
 
     @media only screen and (max-width: 786px){
         height: 200vh;
+        overflow-y: scroll;
     }
 `;
 const Container = styled.div`
@@ -106,8 +107,8 @@ const Img = styled.img`
     }
 
     @media only screen and (max-width: 786px){
-        width: 300px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
     }
 `
 
