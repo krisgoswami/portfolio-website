@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 
 const Section = styled.div`
@@ -129,25 +130,24 @@ const Button = styled.button`
     }
 `;
 
-const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    }
+
+const Contact = () => {
+
+    const ref = useRef();
+    const [success, setSuccess] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Add your submission logic here (e.g., send data to server)
-        console.log(formData);
+
+        emailjs.sendForm('service_vxnhrqk', 'template_3ozba4m', ref.current, 'PocBBgNUDjiVTPT3y')
+            .then((result) => {
+                console.log(result.text);
+                setSuccess(true);
+            }, (error) => {
+                console.log(error.text);
+                setSuccess(false);
+            });
     }
 
     return (
@@ -155,15 +155,13 @@ const Contact = () => {
             <Container>
                 <Left>
                     <Title>Contact Me</Title>
-                    <Form onSubmit={handleSubmit}>
+                    <Form ref={ref} onSubmit={handleSubmit}>
                         <FormGroup>
                             <Label htmlFor="name">Name</Label>
                             <Input
                                 type="text"
                                 id="name"
                                 name="name"
-                                value={formData.name}
-                                onChange={handleChange}
                                 required
                             />
                         </FormGroup>
@@ -173,8 +171,6 @@ const Contact = () => {
                                 type="email"
                                 id="email"
                                 name="email"
-                                value={formData.email}
-                                onChange={handleChange}
                                 required
                             />
                         </FormGroup>
@@ -183,12 +179,11 @@ const Contact = () => {
                             <Textarea
                                 id="message"
                                 name="message"
-                                value={formData.message}
-                                onChange={handleChange}
                                 required
                             />
                         </FormGroup>
                         <Button type="submit">Submit</Button>
+                        {success && <p>Message sent. I'll get back to you shortly.</p>}
                     </Form>
                 </Left>
                 <Right>
