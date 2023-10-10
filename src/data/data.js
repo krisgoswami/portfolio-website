@@ -36,12 +36,12 @@ export const education = [
     {
         degree: "MS in Computer Science",
         university: "Liverpool John Moores University",
-        completion: "Aug 2023"
+        completion: "Sep 2022 - Aug 2023"
     },
     {
         degree: "Post Graduation Diploma",
         university: "IIIT-Bangalore",
-        completion: "Aug 2022"
+        completion: "Aug 2021 - Sep 2022"
     },
 ]
 
