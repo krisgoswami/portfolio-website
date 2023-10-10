@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { works } from '../data/data';
 
+
 const Section = styled.div`
     padding: 50px;
     text-align: center;
@@ -89,11 +90,13 @@ const Works = React.forwardRef((props, ref) => {
             <Title>My Projects</Title>
             <WorkContainer>
                 {works.map((work, index) => (
-                    <WorkCard key={index}>
-                        <WorkImage src={work.img} alt={`Screenshot of ${work.title}`} />
-                        <WorkTitle>{work.title}</WorkTitle>
-                        <WorkDescription>{work.description}</WorkDescription>
-                    </WorkCard>
+                    <a style={{ textDecoration: 'none', color: 'white' }} href={work.href} target="_blank">
+                        <WorkCard key={index}>
+                            <WorkImage src={work.img} alt={`Screenshot of ${work.title}`} />
+                            <WorkTitle>{work.title}</WorkTitle>
+                            <WorkDescription>{work.description}</WorkDescription>
+                        </WorkCard>
+                    </a>
                 ))}
             </WorkContainer>
         </Section>
