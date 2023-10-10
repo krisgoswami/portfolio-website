@@ -28,7 +28,7 @@ export const workex = [
     {
         company: "Medusind",
         position: "Senior Client Service Executive",
-        duration: "Jun 2018 - Jun 2019"
+        duration: "May 2018 - Jun 2019"
     },
 ]
 
@@ -39,9 +39,9 @@ export const education = [
         completion: "Aug 2023"
     },
     {
-        degree: "Post Graduate Diploma",
+        degree: "Post Graduation Diploma",
         university: "IIIT-Bangalore",
-        completion: "August 2022"
+        completion: "Aug 2022"
     },
 ]
 
