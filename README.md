@@ -2,7 +2,7 @@
 
 Welcome to my portfolio website! This website showcases my projects and provides information about me. It is built using React, Vite, and Styled Components for a smooth and responsive user experience.
 
-![Screenshot (78)](https://github.com/krisgoswami/portfolio-website/assets/91143716/2aa69ed5-6187-4c21-b61b-5611d2f0524b)
+![Screenshot](https://github.com/krisgoswami/portfolio-website/assets/91143716/d557851c-db19-4995-9ddf-9f15321d5aea)
 
 ## Technologies Used
 
