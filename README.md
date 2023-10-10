@@ -13,7 +13,7 @@ Welcome to my portfolio website! This website showcases my projects and provides
 
 ## Live Demo
 
-Check out the live version of my portfolio website [here](https://www.yourportfolio.com).
+Check out the live version of my portfolio website [here](https://portfolio-by-krish.netlify.app/).
 
 ## Features
 
