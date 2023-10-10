@@ -3,16 +3,19 @@ export const works = [
         title: 'Course selling app',
         description: 'Basic course selling app made using MERN stack',
         img: './images/website1.png',
+        href: 'https://coursez-by-krish.netlify.app/',
     },
     {
         title: 'Blog App',
         description: 'Basic blog app made using MERN stack',
         img: './images/website2.png',
+        href: 'https://mernblogapp-by-krish.netlify.app/',
     },
     {
         title: 'Admin Dashboard',
         description: 'Admin dashboard of the course app. It is used to publish courses on the main app',
         img: './images/website3.png',
+        href: 'https://coursez-app-admin-panel.netlify.app/',
     },
 ];
 
