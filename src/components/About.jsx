@@ -5,7 +5,6 @@ import { workex, education } from '../data/data';
 const Section = styled.div`
     display: flex;
     justify-content: space-around;
-    padding: 50px;
     align-items: center;
     text-align: left;
     background-color: #00000098;
@@ -65,6 +64,7 @@ const Description = styled.p`
     font-size: 18px;
     color: white;
     margin-bottom: 30px;
+    text-align: justify;
 `;
 
 const Button = styled.button`
@@ -180,7 +180,7 @@ const AboutMe = React.forwardRef((props, ref) => {
                     <Title>Hello there, I'm Krishanu</Title>
                     <Subtitle>Full Stack Web Developer</Subtitle>
                     <Description>
-                        Hi! My name is Krishanu, a tech enthusiast based in Ahmedabad. With a solid foundation in programming, I'm passionate about web development. I had recently finished my Postgrad degree and Masters degree and I'm currently looking for a job. So far, my journey is marked by hard work and I'm exploring new opportunities in the field of web development. I'm a complete rookie at the moment, but looking ahead, I'm excited about learning new things and aiming to make contributions to a larger cause in the field of technology. Let's connect!
+                        Greetings! I'm Krishanu, a tech enthusiast based in Ahmedabad. With a solid foundation in programming, I'm passionate about web development. I have recently finished my Postgrad degree and Masters degree and I'm currently looking for a job. Embracing my rookie status in this domain, I'm eagerly anticipating the learning journey ahead. I thrive on challenges and am poised to dive headfirst into the world of web development. Let's connect and embark on this journey together!
                     </Description>
                     {/* <Button>Get in Touch</Button> */}
                 </LeftContainer>

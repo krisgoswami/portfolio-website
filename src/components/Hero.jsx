@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Navbar from './Navbar';
+import { socials } from '../data/data';
 
 const Section = styled.div`
     height: 100vh;
@@ -60,8 +61,13 @@ const Title = styled.h1`
         text-align: center;
     }
 `
-const WhatAmI = styled.div`
-    
+const Icons = styled.div`
+    display: flex;
+    margin-top: 40px;
+    gap: 20px;
+`
+const Icon = styled.img`
+    height: 30px;
 `
 const Button = styled.button`
     cursor: pointer;
@@ -82,6 +88,8 @@ const Button = styled.button`
 
 const Desc = styled.p`
     font-size: 25px;
+    margin: 0;
+    padding: 0;
 
     @media only screen and (max-width: 786px){
         text-align: center;
@@ -113,20 +121,26 @@ const Img = styled.img`
 `
 
 const Hero = () => {
+
     return (
         <Section>
             <Container>
                 <Left>
-                    <Title>Hi, my name is Krish.</Title>
-                    <WhatAmI>
-                        <Desc>I'm a budding fullstack web developer.</Desc>
-                    </WhatAmI>
+                    <Title>Hi, my name is
+                        <span style={{ color: "#eba154" }}> Krish</span>.</Title>
+                    <Desc>I'm a budding fullstack web developer.</Desc>
+                    <Icons>
+                        {socials.map((site, index) =>
+                            <a href={site.href} target='_blank'>
+                                <Icon key={index} src={`./images/${site.name}.svg`}></Icon>
+                            </a>
+                        )}
+                    </Icons>
                     {/* <Button>Learn More</Button> */}
                 </Left>
                 <Right>
                     {/* 3dmodel */}
                     <Img src="./images/dev.svg"></Img>
-
                 </Right>
             </Container>
         </Section>

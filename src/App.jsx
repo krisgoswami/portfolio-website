@@ -7,6 +7,7 @@ import Works from './components/Works'
 import AboutMe from './components/About'
 import Skills from './components/Skills'
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const Conatiner = styled.div`
   height: 100vh;
@@ -55,6 +56,7 @@ function App() {
         <Skills ref={mySkillsRef} />
         <Works ref={myWorksRef} />
         <Contact ref={contactMeRef} />
+        <Footer />
       </Conatiner>
     </>
   )

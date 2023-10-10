@@ -96,7 +96,7 @@ const Navbar = ({ handleAboutMeClick, handleMySkillsClick, handleContactClick, h
                     </List>
                 </Links>
                 <Icons>
-                    <Button onClick={contactClick}>Contact Now</Button>
+                    <Button onClick={contactClick}>Contact</Button>
                 </Icons>
             </Container>
         </Section>
