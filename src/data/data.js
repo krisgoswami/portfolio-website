@@ -1,3 +1,14 @@
+export const socials = [
+    {
+        name: "linkedin",
+        href: "https://www.linkedin.com/in/krishanu-goswami/",
+    },
+    {
+        name: "githubwhite",
+        href: "https://github.com/krisgoswami",
+    },
+]
+
 export const works = [
     {
         title: 'Course selling app',
