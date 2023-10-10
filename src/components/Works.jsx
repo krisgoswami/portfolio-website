@@ -5,7 +5,8 @@ import { works } from '../data/data';
 const Section = styled.div`
     padding: 50px;
     text-align: center;
-    scroll-snap-align: center;
+    background-color: #00000098;
+    /* scroll-snap-align: center; */
     height: 100vh;
 
     @media (max-width: 768px) {
@@ -81,10 +82,10 @@ const WorkImage = styled.img`
     margin-bottom: 10px;
 `;
 
-const Works = () => {
+const Works = React.forwardRef((props, ref) => {
 
     return (
-        <Section>
+        <Section ref={ref}>
             <Title>My Projects</Title>
             <WorkContainer>
                 {works.map((work, index) => (
@@ -97,6 +98,6 @@ const Works = () => {
             </WorkContainer>
         </Section>
     );
-};
+});
 
 export default Works;

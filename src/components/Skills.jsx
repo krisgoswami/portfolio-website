@@ -5,7 +5,7 @@ import { basic, design, frameworks, backend, libraries, database, extra } from '
 const Section = styled.div`
     padding: 50px;
     text-align: center;
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; */
     align-items: center;
     height: 100vh;
 
@@ -83,10 +83,10 @@ const TechStackIcon = styled.img`
     /* border-radius: 20px; */
 `;
 
-const Skills = () => {
+const Skills = React.forwardRef((props, ref) => {
 
     return (
-        <Section>
+        <Section ref={ref}>
             <Title>Technologies I Know</Title>
             <Container>
                 <div>
@@ -169,6 +169,6 @@ const Skills = () => {
             </Container>
         </Section>
     );
-};
+});
 
 export default Skills;

@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 
 const Section = styled.div`
     height: 100vh;
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,7 +115,6 @@ const Img = styled.img`
 const Hero = () => {
     return (
         <Section>
-            <Navbar />
             <Container>
                 <Left>
                     <Title>Hi, my name is Krish.</Title>

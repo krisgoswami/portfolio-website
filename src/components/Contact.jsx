@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Section = styled.div`
     height: 100vh;
-    scroll-snap-align: center;
+    /* scroll-snap-align: center; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,7 +132,7 @@ const Button = styled.button`
 
 
 
-const Contact = () => {
+const Contact = React.forwardRef((props, refs) => {
 
     const ref = useRef();
     const [success, setSuccess] = useState(null);
@@ -151,7 +151,7 @@ const Contact = () => {
     }
 
     return (
-        <Section>
+        <Section ref={refs}>
             <Container>
                 <Left>
                     <Title>Contact Me</Title>
@@ -192,6 +192,6 @@ const Contact = () => {
             </Container>
         </Section>
     );
-};
+});
 
 export default Contact;

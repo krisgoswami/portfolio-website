@@ -8,7 +8,8 @@ const Section = styled.div`
     padding: 50px;
     align-items: center;
     text-align: left;
-    scroll-snap-align: center;
+    background-color: #00000098;
+    /* scroll-snap-align: center; */
     height: 100vh;
 
     @media (max-width: 768px) {
@@ -170,10 +171,10 @@ const EducationCompletion = styled.p`
     margin-bottom: 5px;
 `;
 
-const AboutMe = () => {
+const AboutMe = React.forwardRef((props, ref) => {
 
     return (
-        <Section>
+        <Section ref={ref}>
             <Container>
                 <LeftContainer>
                     <Title>Hello there, I'm Krishanu</Title>
@@ -210,6 +211,6 @@ const AboutMe = () => {
             </Container>
         </Section>
     );
-};
+});
 
 export default AboutMe;

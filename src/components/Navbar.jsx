@@ -49,7 +49,7 @@ const List = styled.ul`
         display: none;
     }
 `;
-const ListItem = styled.li`
+const ListItem = styled.a`
     cursor: pointer;
 `;
 const Button = styled.button`
@@ -68,20 +68,35 @@ const Button = styled.button`
     }
 `;
 
-const Navbar = () => {
+const Navbar = ({ handleAboutMeClick, handleMySkillsClick, handleContactClick, handleMyProjectsClick }) => {
+
+    const handleAboutClick = () => {
+        handleAboutMeClick();
+    }
+    const handleSkillClick = () => {
+        handleMySkillsClick();
+    }
+    const handleProjectsClick = () => {
+        handleMyProjectsClick();
+    }
+    const contactClick = () => {
+        handleContactClick();
+    }
+
     return (
         <Section>
             <Container>
                 <Links>
                     <Logo src="./images/logo.png" />
                     <List>
-                        <ListItem>About</ListItem>
-                        <ListItem>Works</ListItem>
+                        <ListItem onClick={handleAboutClick}>About</ListItem>
+                        <ListItem onClick={handleSkillClick}>Tech</ListItem>
+                        <ListItem onClick={handleProjectsClick}>My Projects</ListItem>
                         {/* <ListItem>Contact</ListItem> */}
                     </List>
                 </Links>
                 <Icons>
-                    <Button>Contact Now</Button>
+                    <Button onClick={contactClick}>Contact Now</Button>
                 </Icons>
             </Container>
         </Section>
