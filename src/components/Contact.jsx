@@ -1,139 +1,7 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import styled from 'styled-components';
-
-const Section = styled.div`
-    height: 100vh;
-    /* scroll-snap-align: center; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-
-    @media only screen and (max-width: 768px) {
-        height: auto;
-    }
-`;
-const Container = styled.div`
-    height: 100vh;  
-    width: 1400px;
-    display: flex;
-    justify-content: space-between;
-
-    @media only screen and (max-width: 768px) {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-`;
-
-const Left = styled.div`
-    display: flex;  
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    flex: 2;
-
-    @media only screen and (max-width: 768px) {
-        flex: 1;
-        align-items: center;
-        text-align: center;
-    }   
-`
-
-const Right = styled.div`
-    flex: 3;
-    position: relative;
-
-    @media only screen and (max-width: 768px) {
-        flex: 1;
-        width: 100%;
-        max-width: 500px;
-    }
-`
-const Img = styled.img`
-    height: 500px;
-    width: 700px;
-    object-fit: contain;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 200px;
-    right: 0;
-    margin: auto;
-    animation: animate 2s infinite ease alternate;
-
-    @keyframes animate {
-        to{
-            transform: translateY(20px);
-        }
-    }
-
-    @media only screen and (max-width: 768px) {
-        display: none;
-    }
-`
-
-const Title = styled.h1`
-    font-size: 48px;
-    color: #eba154;
-    margin-bottom: 30px;
-`;
-
-const Form = styled.form`
-    max-width: 600px;
-    /* margin: 0 auto; */
-`;
-
-const FormGroup = styled.div`
-    margin-bottom: 20px;
-    width: 500px;
-`;
-
-const Label = styled.label`
-    font-size: 18px;
-    display: block;
-    margin-bottom: 5px;
-`;
-
-const Input = styled.input`
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-`;
-
-const Textarea = styled.textarea`
-    width: 100%;
-    height: 150px;   
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-`;
-
-const Button = styled.button`
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 18px;
-    background: #7a2d41;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    font-family: 'Gabarito';
-    transition: background 0.3s;
-
-    &:hover {
-        background: #5e1c2a;
-    }
-`;
-
-
 
 const Contact = React.forwardRef((props, refs) => {
-
     const ref = useRef();
     const [success, setSuccess] = useState(null);
 
@@ -151,46 +19,56 @@ const Contact = React.forwardRef((props, refs) => {
     }
 
     return (
-        <Section ref={refs}>
-            <Container>
-                <Left>
-                    <Title>Contact Me</Title>
-                    <Form ref={ref} onSubmit={handleSubmit}>
-                        <FormGroup>
-                            <Label htmlFor="name">Name</Label>
-                            <Input
-                                type="text"
-                                id="name"
-                                name="name"
-                                required
-                            />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label htmlFor="email">Email</Label>
-                            <Input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                            />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label htmlFor="message">Message</Label>
-                            <Textarea
-                                id="message"
-                                name="message"
-                                required
-                            />
-                        </FormGroup>
-                        <Button type="submit">Submit</Button>
-                        {success && <p>Message sent. I'll get back to you shortly.</p>}
-                    </Form>
-                </Left>
-                <Right>
-                    <Img src='./images/mail.svg'></Img>
-                </Right>
-            </Container>
-        </Section>
+        <div
+            ref={refs}
+            className="h-max flex justify-around items-center flex-col md:flex-row md:h-screen"
+        >
+            <div className="flex-1 max-w-screen-md mx-auto text-center md:text-left mb-10 md:mb-0 px-6 md:pl-12">
+                <h1 className="text-3xl m-auto md:text-5xl font-bold leading-none mt-10 mb-4 text-orange-400">
+                    Contact Me
+                </h1>
+                <form ref={ref} onSubmit={handleSubmit}>
+                    <div className="mb-6">
+                        <label htmlFor="name" className="block text-xl text-white mb-2">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            className="w-full px-4 text-lg text-black border border-gray-300 rounded focus:outline-none focus:border-blue-400 md:w-2/3"
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <label htmlFor="email" className="block text-xl text-white mb-2">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            className="w-full px-4 text-lg text-black border border-gray-300 rounded focus:outline-none focus:border-blue-400 md:w-2/3" />
+                    </div>
+                    <div className="mb-6">
+                        <label htmlFor="message" className="block text-xl text-white mb-2">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            required
+                            className="w-full h-40 px-2 py-1 text-lg border text-black border-gray-300 rounded-lg focus:outline-none focus:border-blue-400 md:w-2/3"
+                        ></textarea>
+                    </div>
+                    <button
+                        type="submit"
+                        className="cursor-pointer w-32 py-2 text-xl bg-red-600 rounded-lg text-white transition duration-300 hover:bg-red-800"
+                    >
+                        Submit
+                    </button>
+                    {success && <p className="text-white">Message sent. I'll get back to you shortly.</p>}
+                </form>
+            </div>
+            <div className="relative flex-1">
+                <img src='./images/mail.svg' alt="Mail" className="md:w-1/2 m-auto h-full align-middle" />
+            </div>
+        </div>
     );
 });
 
