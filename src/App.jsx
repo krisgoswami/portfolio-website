@@ -1,4 +1,3 @@
-import styled from 'styled-components'
 import React, { useRef } from 'react';
 import './App.css'
 import Contact from './components/Contact'
@@ -8,19 +7,6 @@ import AboutMe from './components/About'
 import Skills from './components/Skills'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
-const Conatiner = styled.div`
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  background: url("./images/bg.jpg");
-  color: white;
-  overflow-y: auto;
-  scrollbar-width: none;
-  ::-webkit-scrollbar{
-    display: none;
-  }
-`;
 
 
 function App() {
