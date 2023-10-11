@@ -1,149 +1,28 @@
-import React from 'react'
-import styled from 'styled-components';
-import Navbar from './Navbar';
+import React from 'react';
 import { socials } from '../data/data';
-
-const Section = styled.div`
-    height: 100vh;
-    /* scroll-snap-align: center; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-
-    @media only screen and (max-width: 786px){
-        height: 200vh;
-        overflow-y: scroll;
-    }
-`;
-const Container = styled.div`
-    height: 100%;  
-    width: 1400px;
-    display: flex;
-    justify-content: space-between;
-
-    @media only screen and (max-width: 786px){
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-`;
-
-const Left = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    flex: 2;
-
-    @media only screen and (max-width: 786px){
-        flex: 1;
-        align-items: center;
-    }
-`
-
-const Right = styled.div`
-    flex: 3;
-    position: relative;
-
-    @media only screen and (max-width: 786px){
-        flex: 1;
-        width: 100%;
-    }
-`
-const Title = styled.h1`
-    font-size: 75px;
-    padding: 0;
-    margin: 0;
-
-    @media only screen and (max-width: 786px){
-        text-align: center;
-    }
-`
-const Icons = styled.div`
-    display: flex;
-    margin-top: 40px;
-    gap: 20px;
-`
-const Icon = styled.img`
-    height: 30px;
-`
-const Button = styled.button`
-    cursor: pointer;
-    width: 140px;
-    padding: 10px;
-    font-size: 18px;
-    background: #7a2d41;
-    border-style: none;
-    color: white;
-    border-radius: 5px;
-    font-family: 'Gabarito';
-    transition: background 0.3s;
-
-    &:hover {
-        background: #5e1c2a;
-    }
-`
-
-const Desc = styled.p`
-    font-size: 25px;
-    margin: 0;
-    padding: 0;
-
-    @media only screen and (max-width: 786px){
-        text-align: center;
-        padding: 10px;
-    }
-`
-const Img = styled.img`
-    height: 500px;
-    width: 700px;
-    object-fit: contain;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    animation: animate 2s infinite ease alternate;
-
-    @keyframes animate {
-        to{
-            transform: translateY(20px);
-        }
-    }
-
-    @media only screen and (max-width: 786px){
-        width: 400px;
-        height: 400px;
-    }
-`
 
 const Hero = () => {
 
     return (
-        <Section>
-            <Container>
-                <Left>
-                    <Title>Hi, my name is
-                        <span style={{ color: "#eba154" }}> Krish</span>.</Title>
-                    <Desc>I'm a budding fullstack web developer.</Desc>
-                    <Icons>
-                        {socials.map((site, index) =>
-                            <a href={site.href} target='_blank'>
-                                <Icon key={index} src={`./images/${site.name}.svg`}></Icon>
-                            </a>
-                        )}
-                    </Icons>
-                    {/* <Button>Learn More</Button> */}
-                </Left>
-                <Right>
-                    {/* 3dmodel */}
-                    <Img src="./images/dev.svg"></Img>
-                </Right>
-            </Container>
-        </Section>
+        <div className="h-screen flex justify-around items-center flex-col md:flex-row">
+            <div className="h-full w-full flex-1 md:w-3/5 flex flex-col justify-center gap-10 md:gap-10 text-center md:text-left"> {/* Added text-center class for centering */}
+                <h1 className="text-4xl md:text-6xl font-bold leading-none md:ml-40">
+                    Hi, my name is <span className="text-orange-400">Krish</span>.
+                </h1>
+                <p className="text-xl sm:text-xl md:text-2xl mb-6 md:ml-40">I'm a budding fullstack web developer.</p>
+                <div className="flex gap-4 mx-auto md:ml-40 ">
+                    {socials.map((site, index) =>
+                        <a href={site.href} target='_blank' rel="noopener noreferrer" key={index}>
+                            <img src={`./images/${site.name}.svg`} alt={site.name} className="h-8" />
+                        </a>
+                    )}
+                </div>
+                {/* <button className="cursor-pointer w-32 py-2 text-xl bg-red-600 rounded-lg text-white transition duration-300 hover:bg-red-800">Learn More</button> */}
+            </div>
+            <div className="relative flex-1">
+                <img src="./images/dev.svg" alt="Developer" className="w-3/4 m-auto md:m-auto h-full align-middle" />
+            </div>
+        </div>
     )
 }
 
