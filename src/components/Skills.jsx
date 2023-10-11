@@ -4,7 +4,7 @@ import { basic, design, frameworks, backend, libraries, database, extra } from '
 const Skills = React.forwardRef((props, ref) => {
     return (
         <div ref={ref} className="h-max py-12 text-center md:text-left">
-            <h1 className="text-4xl text-center mb-8 text-yellow-400">Technologies I Know</h1>
+            <h1 className="text-4xl text-center mb-8 text-orange-400">Technologies I Know</h1>
             <div className="flex flex-wrap justify-center gap-8 md:justify-center">
                 <div className="w-full md:w-1/2 lg:w-1/3">
                     <h2 className="text-2xl text-center mb-4">Basic</h2>

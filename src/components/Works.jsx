@@ -89,7 +89,7 @@ const Works = React.forwardRef((props, ref) => {
             ref={ref}
             className="h-max py-12 text-center bg-opacity-70 bg-black md:h-screen"
         >
-            <h1 className="text-4xl mb-8 text-yellow-400">My Projects</h1>
+            <h1 className="text-4xl mb-8 text-orange-400">My Projects</h1>
             <div className="flex flex-wrap justify-center gap-8">
                 {works.map((work, index) => (
                     <a
