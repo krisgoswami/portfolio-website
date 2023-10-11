@@ -35,7 +35,7 @@ const Contact = React.forwardRef((props, refs) => {
                             id="name"
                             name="name"
                             required
-                            className="w-full px-4 text-lg text-black border border-gray-300 rounded focus:outline-none focus:border-blue-400 md:w-2/3"
+                            className="w-full h-10 px-4 text-lg text-black border border-gray-300 rounded focus:outline-none focus:border-blue-400 md:w-2/3"
                         />
                     </div>
                     <div className="mb-6">
@@ -45,7 +45,7 @@ const Contact = React.forwardRef((props, refs) => {
                             id="email"
                             name="email"
                             required
-                            className="w-full px-4 text-lg text-black border border-gray-300 rounded focus:outline-none focus:border-blue-400 md:w-2/3" />
+                            className="w-full h-10 px-4 text-lg text-black border border-gray-300 rounded focus:outline-none focus:border-blue-400 md:w-2/3" />
                     </div>
                     <div className="mb-6">
                         <label htmlFor="message" className="block text-xl text-white mb-2">Message</label>
