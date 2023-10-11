@@ -28,7 +28,7 @@ const Navbar = ({ handleAboutMeClick, handleMySkillsClick, handleContactClick, h
                     </ul>
                 </div>
                 <div className="flex items-center">
-                    <button className="cursor-pointer px-4 py-2 bg-red-600 rounded-lg text-white transition duration-300 hover:bg-red-800" onClick={contactClick}>Contact</button>
+                    <button className="cursor-pointer mx-2 px-4 py-2 bg-red-600 rounded-lg text-white transition duration-300 hover:bg-red-800" onClick={contactClick}>Contact</button>
                 </div>
             </div>
         </div>
