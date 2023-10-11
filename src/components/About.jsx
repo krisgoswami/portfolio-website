@@ -4,9 +4,9 @@ import { workex, education } from '../data/data';
 const AboutMe = React.forwardRef((props, ref) => {
 
     return (
-        <div ref={ref} className="h-screen flex justify-around items-center flex-col md:flex-row bg-opacity-50 bg-black">
+        <div ref={ref} className="h-max flex justify-around items-center flex-col md:flex-row bg-opacity-70 bg-black md:h-screen">
             <div className="max-w-screen-md mx-auto text-center md:text-left mb-10 md:mb-0 px-6 md:pl-12">
-                <h1 className="text-2xl mt-5 md:text-5xl font-bold leading-none mb-4 text-white">
+                <h1 className="text-2xl mt-10 md:text-5xl font-bold leading-none mb-4 text-white">
                     Hello there, I'm Krishanu
                 </h1>
                 <h2 className="text-lg md:text-2xl text-orange-400 mb-5">
