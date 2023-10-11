@@ -1,174 +1,92 @@
 import React from 'react';
-import styled from 'styled-components';
 import { basic, design, frameworks, backend, libraries, database, extra } from '../data/data';
 
-const Section = styled.div`
-    padding: 50px;
-    text-align: center;
-    /* scroll-snap-align: center; */
-    align-items: center;
-    height: 100vh;
-
-    @media only screen and (max-width: 768px) {
-        padding: 50px;
-        overflow-y: scroll;
-    }
-`;
-
-const Title = styled.h1`
-    font-size: 40px;
-    margin-bottom: 30px;
-    color: #eba154;
-
-    @media only screen and (max-width: 768px) {
-        font-size: 30px;
-    }
-`;
-
-const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
-
-    @media only screen and (max-width: 786px){
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-`
-
-const TechStackContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #00000058;
-    padding: 20px;
-    border-radius: 10px;
-`;
-
-const TechItem = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    background-color: #ffffff4f;
-    margin: 10px;
-    padding: 10px;
-    height: 25px;
-    width: 300px;
-    border-radius: 10px;
-    transition: transform 0.3s; /* Added transition for smooth hover effect */
-    
-    &:hover {
-        transform: scale(1.05); /* Scale the image on hover */
-    }
-`;
-
-const TechStackName = styled.p`
-    color: white;
-    font-size: 20px;
-    margin: 10px;
-`
-
-const TechStackIcon = styled.img`
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-    /* padding: 20px; */
-    /* background-color: #ffffff42; */
-    /* border-radius: 20px; */
-`;
-
 const Skills = React.forwardRef((props, ref) => {
-
     return (
-        <Section ref={ref}>
-            <Title>Technologies I Know</Title>
-            <Container>
-                <div>
-                    <h2>Basic</h2>
-                    <TechStackContainer>
+        <div ref={ref} className="h-max py-12 text-center md:text-left">
+            <h1 className="text-4xl text-center mb-8 text-yellow-400">Technologies I Know</h1>
+            <div className="flex flex-wrap justify-center gap-8 md:justify-center">
+                <div className="w-full md:w-1/2 lg:w-1/3">
+                    <h2 className="text-2xl text-center mb-4">Basic</h2>
+                    <div className="bg-opacity-70 mx-10 bg-black p-4 rounded-lg md:mx-10">
                         {basic.map((tech, index) => (
-                            <TechItem key={index}>
-                                <TechStackName >{tech.name}</TechStackName>
-                                <TechStackIcon src={`./images/${tech.img}.svg`} alt={tech} />
-                            </TechItem>
+                            <div key={index} className="flex justify-between items-center m-4 transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-white">{tech.name}</p>
+                                <img src={`./images/${tech.img}.svg`} alt={tech} className="bg-white rounded p-0.5 w-7 h-7" />
+                            </div>
                         ))}
-                    </TechStackContainer>
+                    </div>
                 </div>
-                <div>
-                    <h2>Frameworks</h2>
-                    <TechStackContainer>
+                <div className="w-full md:w-1/2 lg:w-1/3">
+                    <h2 className="text-2xl text-center mb-4">Frameworks</h2>
+                    <div className="bg-opacity-70 mx-10 bg-black p-4 rounded-lg md:mx-10">
                         {frameworks.map((tech, index) => (
-                            <TechItem key={index}>
-                                <TechStackName>{tech.name}</TechStackName>
-                                <TechStackIcon src={`./images/${tech.img}.svg`} alt={tech} />
-                            </TechItem>
+                            <div key={index} className="flex justify-between items-center m-4 transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-white">{tech.name}</p>
+                                <img src={`./images/${tech.img}.svg`} alt={tech} className="bg-white rounded p-0.5 w-7 h-7" />
+                            </div>
                         ))}
-                    </TechStackContainer>
+                    </div>
                 </div>
-                <div>
-                    <h2>Backend</h2>
-                    <TechStackContainer>
+                <div className="w-full md:w-1/2 lg:w-1/3">
+                    <h2 className="text-2xl text-center mb-4">Backend</h2>
+                    <div className="bg-opacity-70 mx-10 bg-black p-4 rounded-lg md:mx-10">
                         {backend.map((tech, index) => (
-                            <TechItem key={index}>
-                                <TechStackName >{tech.name}</TechStackName>
-                                <TechStackIcon src={`./images/${tech.img}.svg`} alt={tech} />
-                            </TechItem>
+                            <div key={index} className="flex justify-between items-center m-4 transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-white">{tech.name}</p>
+                                <img src={`./images/${tech.img}.svg`} alt={tech} className="bg-white rounded p-0.5 w-7 h-7" />
+                            </div>
                         ))}
-                    </TechStackContainer>
+                    </div>
                 </div>
-                <div>
-                    <h2>Styling</h2>
-                    <TechStackContainer>
+                <div className="w-full md:w-1/2 lg:w-1/3">
+                    <h2 className="text-2xl text-center mb-4">Styling</h2>
+                    <div className="bg-opacity-70 mx-10 bg-black p-4 rounded-lg md:mx-10">
                         {libraries.map((tech, index) => (
-                            <TechItem key={index}>
-                                <TechStackName >{tech.name}</TechStackName>
-                                <TechStackIcon src={`./images/${tech.img}.svg`} alt={tech} />
-                            </TechItem>
+                            <div key={index} className="flex justify-between items-center m-4 transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-white">{tech.name}</p>
+                                <img src={`./images/${tech.img}.svg`} alt={tech} className="bg-white rounded p-0.5 w-7 h-7" />
+                            </div>
                         ))}
-                    </TechStackContainer>
+                    </div>
                 </div>
-                <div>
-                    <h2>Design</h2>
-                    <TechStackContainer>
+                <div className="w-full md:w-1/2 lg:w-1/3">
+                    <h2 className="text-2xl text-center mb-4">Design</h2>
+                    <div className="bg-opacity-70 mx-10 bg-black p-4 rounded-lg md:mx-10">
                         {design.map((tech, index) => (
-                            <TechItem key={index}>
-                                <TechStackName >{tech.name}</TechStackName>
-                                <TechStackIcon src={`./images/${tech.img}.svg`} alt={tech} />
-                            </TechItem>
+                            <div key={index} className="flex justify-between items-center m-4 transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-white">{tech.name}</p>
+                                <img src={`./images/${tech.img}.svg`} alt={tech} className="bg-white rounded p-0.5 w-7 h-7" />
+                            </div>
                         ))}
-                    </TechStackContainer>
+                    </div>
                 </div>
-                <div>
-                    <h2>Database</h2>
-                    <TechStackContainer>
-                        {database.map((tech, index) => (
-                            <TechItem key={index}>
-                                <TechStackName >{tech.name}</TechStackName>
-                                <TechStackIcon src={`./images/${tech.img}.svg`} alt={tech} />
-                            </TechItem>
-                        ))}
-                    </TechStackContainer>
-                </div>
-                <div>
-                    <h2>Extra</h2>
-                    <TechStackContainer>
+                <div className="w-full md:w-1/2 lg:w-1/3">
+                    <h2 className="text-2xl text-center mb-4">Extra</h2>
+                    <div className="bg-opacity-70 mx-10 bg-black p-4 rounded-lg md:mx-10">
                         {extra.map((tech, index) => (
-                            <TechItem key={index}>
-                                <TechStackName >{tech.name}</TechStackName>
-                                <TechStackIcon src={`./images/${tech.img}.svg`} alt={tech} />
-                            </TechItem>
+                            <div key={index} className="flex justify-between items-center m-4 transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-white">{tech.name}</p>
+                                <img src={`./images/${tech.img}.svg`} alt={tech} className="bg-white rounded p-0.5 w-7 h-7" />
+                            </div>
                         ))}
-                    </TechStackContainer>
+                    </div>
                 </div>
-            </Container>
-        </Section>
+                <div className="w-full md:w-1/2 lg:w-1/3">
+                    <h2 className="text-2xl text-center mb-4">Database</h2>
+                    <div className="bg-opacity-70 mx-10 bg-black p-4 rounded-lg md:mx-10">
+                        {database.map((tech, index) => (
+                            <div key={index} className="flex justify-between items-center m-4 transform transition-transform duration-300 hover:scale-105">
+                                <p className="text-white">{tech.name}</p>
+                                <img src={`./images/${tech.img}.svg`} alt={tech} className="bg-white rounded p-0.5 w-7 h-7" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 });
 
 export default Skills;
+
