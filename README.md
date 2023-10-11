@@ -1,8 +1,22 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio website! This website showcases my projects and provides information about me. It is built using React, Vite, and Styled Components for a smooth and responsive user experience.
 
-Currently, two official plugins are available:
+![Screenshot](https://github.com/krisgoswami/portfolio-website/assets/91143716/d557851c-db19-4995-9ddf-9f15321d5aea)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+
+- React
+- Vite
+- Styled Components
+- EmailJS
+
+## Live Demo
+
+Check out the live version of my portfolio website [here](https://portfolio-by-krish.netlify.app/).
+
+## Features
+
+- View information about me.
+- Explore my projects and their details.
+- Contact me directly from the website using the "Contact Me" section.
