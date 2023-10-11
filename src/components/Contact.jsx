@@ -23,7 +23,7 @@ const Contact = React.forwardRef((props, refs) => {
             ref={refs}
             className="h-max flex justify-around items-center flex-col md:flex-row md:h-screen"
         >
-            <div className="flex-1 max-w-screen-md mx-auto text-center md:text-left mb-10 md:mb-0 px-6 md:pl-12">
+            <div className="flex-1 max-w-screen-md mx-auto text-center md:text-left mb-10 md:mb-0 px-6 md:pl-36">
                 <h1 className="text-3xl m-auto md:text-5xl font-bold leading-none mt-10 mb-4 text-orange-400">
                     Contact Me
                 </h1>
