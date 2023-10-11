@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Welcome to my portfolio website! This website showcases my projects and provides information about me. It is built using React, Vite, and Styled Components for a smooth and responsive user experience.
+Welcome to my portfolio website! This website showcases my projects and provides information about me. It is built using React, Vite, and Tailwind CSS for a smooth and responsive user experience.
 
 ![Screenshot](https://github.com/krisgoswami/portfolio-website/assets/91143716/d557851c-db19-4995-9ddf-9f15321d5aea)
 
@@ -8,7 +8,7 @@ Welcome to my portfolio website! This website showcases my projects and provides
 
 - React
 - Vite
-- Styled Components
+- Tailwind CSS
 - EmailJS
 
 ## Live Demo
