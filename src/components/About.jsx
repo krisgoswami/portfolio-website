@@ -13,7 +13,7 @@ const AboutMe = React.forwardRef((props, ref) => {
                     Full Stack Web Developer
                 </h2>
                 <p className="text-md text-justify md:text-xl text-white mb-8">
-                    Greetings! I'm Krishanu, a tech enthusiast based in Ahmedabad. With a solid foundation in programming, I'm passionate about web development. I have recently finished my Postgrad degree and Masters degree and I'm currently looking for a job. Embracing my rookie status in this domain, I'm eagerly anticipating the learning journey ahead. I thrive on challenges and am poised to dive headfirst into the world of web development. Let's connect and embark on this journey together!
+                    Greetings! I'm a tech enthusiast based in Ahmedabad. With a solid foundation in programming, I'm passionate about web development. I have recently finished my Postgrad degree and Masters degree and I'm currently looking for a job. Embracing my rookie status in this domain, I'm eager for the learning journey ahead. I thrive on challenges and am poised to dive headfirst into the world of web development. Let's connect and embark on this journey together!
                 </p>
                 {/* <button className="cursor-pointer py-2 px-4 bg-red-600 rounded-lg text-white transition duration-300 hover:bg-red-800">Get in Touch</button> */}
             </div>
