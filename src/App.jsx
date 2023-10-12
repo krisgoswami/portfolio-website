@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import './App.css'
+import styled from 'styled-components';
 import Contact from './components/Contact'
 import Hero from './components/Hero'
 import Works from './components/Works'
@@ -8,6 +9,18 @@ import Skills from './components/Skills'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+const Conatiner = styled.div`
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  background: url("./images/bg.jpg");
+  color: white;
+  overflow-y: auto;
+  scrollbar-width: none;
+  ::-webkit-scrollbar{
+    display: none;
+  }
+`;
 
 function App() {
   const aboutMeRef = useRef(null);
