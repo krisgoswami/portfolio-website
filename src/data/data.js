@@ -23,10 +23,16 @@ export const works = [
         href: 'https://mernblogapp-by-krish.netlify.app/',
     },
     {
-        title: 'Admin Dashboard',
-        description: 'Admin dashboard of the course app. It is used to publish courses on the main app',
+        title: 'Online Marketplace app',
+        description: 'A marketplace app, where user can buy and sell stuff.',
         img: './images/website3.png',
-        href: 'https://coursez-app-admin-panel.netlify.app/',
+        href: 'https://github.com/krisgoswami/online-marketplace.git',
+    },
+    {
+        title: 'Ground Booking app',
+        description: 'A ground booking app for sports lovers.',
+        img: './images/website4.png',
+        href: 'https://github.com/krisgoswami/ground-booking-app.git',
     },
 ];
 
