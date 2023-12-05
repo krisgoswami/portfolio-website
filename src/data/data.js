@@ -34,6 +34,12 @@ export const works = [
         img: './images/website4.png',
         href: 'https://github.com/krisgoswami/ground-booking-app.git',
     },
+    {
+        title: 'Course App',
+        description: 'Course app with dark/light mode UI.',
+        img: './images/website5.png',
+        href: 'https://github.com/krisgoswami/alemeno-courses.git',
+    },
 ];
 
 export const workex = [
@@ -59,6 +65,11 @@ export const education = [
         degree: "Post Graduation Diploma",
         university: "IIIT-Bangalore",
         completion: "Aug 2021 - Sep 2022"
+    },
+    {
+        degree: "BCA",
+        university: "Navgujarat College of Computer Applications",
+        completion: "Jun 2013 - May 2016"
     },
 ]
 
