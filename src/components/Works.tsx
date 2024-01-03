@@ -1,8 +1,7 @@
-import React from 'react';
-import { works } from '../data/data';
+import React from "react";
+import { works } from "../data/data";
 
-
-const Works = React.forwardRef((props, ref) => {
+const Works = React.forwardRef<HTMLDivElement>((props, ref) => {
     return (
         <div
             ref={ref}
@@ -12,7 +11,7 @@ const Works = React.forwardRef((props, ref) => {
             <div className="flex flex-wrap justify-center gap-8">
                 {works.map((work, index) => (
                     <a
-                        style={{ textDecoration: 'none', color: 'white' }}
+                        style={{ textDecoration: "none", color: "white" }}
                         href={work.href}
                         target="_blank"
                         rel="noopener noreferrer"

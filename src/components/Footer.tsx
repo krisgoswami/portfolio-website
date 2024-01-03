@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const FooterContainer = styled.footer`
-  background-color: #00000098;
-  color: #fff;
-  padding: 5px;
-  text-align: center;
+    background-color: #00000098;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
 `;
 
 const Footer = () => {
